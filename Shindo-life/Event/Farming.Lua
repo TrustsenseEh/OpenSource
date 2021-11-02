@@ -1,8 +1,10 @@
 local player = game.Players.LocalPlayer
 local Hum = player.Character:WaitForChild('HumanoidRootPart')
 local ncp = game.Workspace:WaitForChild('missiongivers')
+G_farming = true
 
-
+while G_farming do
+ wait()
 for i,v in pairs(ncp:GetChildren()) do
  if v.ClassName == "Model" and v.Name == "" and v:FindFirstChild("Head") and v.Head:FindFirstChild("givemission").Enabled and v.Head.givemission:FindFirstChild("color").Visible  then
   local TALK = v:FindFirstChild("Talk")
@@ -16,6 +18,7 @@ for i,v in pairs(ncp:GetChildren()) do
              clienttalk:FireServer("accept")
              until v.Head:FindFirstChild("givemission").Enabled == false
       
+      end
    end
- end
+  end
 end
