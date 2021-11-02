@@ -15,6 +15,7 @@ for i,v in pairs(ncp:GetChildren()) do
                 wait'.2'
              clienttalk:FireServer("accept")
              until v.Head:FindFirstChild("givemission").Enabled == false
+      
    end
  end
 end
